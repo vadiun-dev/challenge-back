@@ -1,0 +1,17 @@
+{
+    "preset": "laravel",
+    "exclude": [
+        "app",
+        "bootstrap",
+        "config",
+        "database",
+        "node_modules",
+        "public",
+        "resources",
+        "storage",
+        "vendor"
+    ],
+    "rules": {
+        "void_return": true
+    }
+}
