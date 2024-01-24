@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "6961c3c0-d2fb-4ddd-955a-b8e18743e471",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24683752"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"hitoceanadmin@admin.com\",\n    \"password\": \"Hitocean3684533!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer cs0VQ6kg5ex8vm6xkMel9VtmXH3OkWPAFjw4gJGR4d5495ab",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mi challenge\",\n    \"content\": \"Soy el mejor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8000/api/crear-posteo"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|cs0VQ6kg5ex8vm6xkMel9VtmXH3OkWPAFjw4gJGR4d5495ab"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "127.0.0.1:8000/api/obtener-posteos"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|cs0VQ6kg5ex8vm6xkMel9VtmXH3OkWPAFjw4gJGR4d5495ab"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "127.0.0.1:8000/api/posteo/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Like",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
