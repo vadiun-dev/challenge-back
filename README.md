@@ -9,3 +9,6 @@ Este es un proyecto que inicio una persona junior, es una api para un blog. Lame
 
 ### API
 Para probar la API hay un archivo para importar directamente a postman, no es obligatorio usarlo pero quiza puede facilitar las cosas.
+
+### Aclaraciones
+El challenge trata de simular un proyecto real, por lo que se puede utilizar google, ChatGPT o lo que se quiera.
