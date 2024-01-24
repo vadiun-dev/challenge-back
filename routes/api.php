@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', 'Src\Application\Admin\Auth\Controllers\AuthController@login');
 
-Route::middleware(['auth:sanctum', 'verified'])->group( function () {
+Route::middleware(['auth:sanctum', 'verified'])->group(function (): void {
 
     //------------------------------ USERS -----------------------------
 
