@@ -43,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
 
 
 
-                    Model::shouldBeStrict(! app()->isProduction());
+                 #   Model::shouldBeStrict(! app()->isProduction());
 
                     Filament::serving(function () {
                         Filament::registerTheme(mix('css/app.css'));

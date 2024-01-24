@@ -2,6 +2,7 @@
 
 namespace Src\Application\Admin\User\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Src\Application\Admin\User\Data\StoreUserData;
 use Src\Application\Admin\User\Data\UpdateUserData;
@@ -10,19 +11,19 @@ use Src\Domain\User\Models\User;
 
 class UserController
 {
-    public function store(StoreUserData $data): void
+    public function store(Request $request)
     {
-        \DB::transaction(function () use ($data): void {
-            $user = User::create(
-                [
-                    'name' => $data->name,
-                    'email' => $data->email,
-                    'password' => Hash::make($data->password),
-                ]
-            );
+        $user = User::create(
+            [
+                'name' => $request->get('name'),
+                'email' => $request->get('email'),
+                'password' => $request->get('password'),
+            ]
+        );
 
-            $user->assignRole($data->roles);
-        });
+        $user->assignRole($request->get('roles'));
+
+        return $user;
     }
 
     public function update(UpdateUserData $data): void
