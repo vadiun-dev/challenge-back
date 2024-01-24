@@ -3,8 +3,6 @@
 namespace Src\Application\Admin\User\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Src\Application\Admin\User\Data\StoreUserData;
 use Src\Application\Admin\User\Data\UpdateUserData;
 use Src\Application\Admin\User\Resources\UserResource;
 use Src\Domain\User\Models\User;
