@@ -88,8 +88,24 @@
 		{
 			"name": "Crear Like",
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "1|cs0VQ6kg5ex8vm6xkMel9VtmXH3OkWPAFjw4gJGR4d5495ab"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "127.0.0.1:8000/api/crear-like/1"
 			},
 			"response": []
 		}
