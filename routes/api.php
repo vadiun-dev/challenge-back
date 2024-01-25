@@ -19,9 +19,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (): void {
 
     //------------------------------ USERS -----------------------------
 
-    Route::get('obtener-posteos', 'App\Http\Controllers\BlogController@index');
-    Route::get('posteo/{id}', 'App\Http\Controllers\BlogController@show');
-    Route::post('crear-posteo', 'App\Http\Controllers\BlogController@createPost');
+    Route::get('posteos', 'App\Http\Controllers\BlogController@index');
+    Route::get('obtener-posteo/{id}', 'App\Http\Controllers\BlogController@show');
+    Route::post('posteos', 'App\Http\Controllers\BlogController@createPost');
 
     Route::post('crear-like/{postId}', 'App\Http\Controllers\BlogController@addLike');
     //route

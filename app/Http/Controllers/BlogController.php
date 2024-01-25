@@ -38,8 +38,6 @@ class BlogController
         return 1;
     }
 
-
-
     public function createPost(Request $request)
     {
         Validator::make($request->all(), [
@@ -49,9 +47,9 @@ class BlogController
 
 
         $post = Post::create([
-                                 'title' => $request->input('title'),
-                                 'content' => $request->input('content'),
-                             ]);
+             'title' => $request->input('title'),
+             'content' => $request->input('content'),
+         ]);
 
         return $post;
     }
